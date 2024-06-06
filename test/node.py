@@ -1,3 +1,4 @@
+import sys
 import network_rs
 import asyncio
 import json
@@ -75,7 +76,7 @@ def sign(inputs: str, package: list[str]):
 
 
 async def main():
-    ip = "/ip4/127.0.0.1/udp/10000/quic-v1/p2p/12D3KooWDVB9kceXRU9fKR5LokzASPpqSnWEYqxZnpmBwixHQiaN"
+    ip = sys.argv[1]
     key = network_rs.get_key()
     port = network_rs.get_free_port()
     peer_id: str = network_rs.get_peer_id(key)

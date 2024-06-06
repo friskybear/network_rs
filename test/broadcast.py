@@ -17,8 +17,7 @@ def coordinate(ip: str, _: list[str]):
 
 async def main():
 
-    _key = [8, 1, 18, 64, 50, 162, 66, 5, 231, 230, 93, 219, 254, 23, 60, 84, 233, 200, 117, 244, 182, 2, 2, 172, 9, 167, 126, 53, 225, 123, 8, 170, 116, 88,
-            199, 63, 54, 132, 65, 88, 202, 101, 105, 24, 164, 38, 16, 125, 87, 81, 255, 97, 42, 232, 167, 127, 141, 37, 53, 143, 183, 52, 177, 47, 98, 130, 79, 139]
+    _key = network_rs.get_key()
     port = network_rs.get_free_port()
     num_of_nodes: int = int(sys.argv[1])
     min_signers: int = int(sys.argv[2])
